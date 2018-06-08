@@ -1,0 +1,133 @@
+version: '1.0'
+
+bugs:
+  - name: mars:base
+    image: cmumars/cp2:base
+    dataset: mars
+    source-location: /ros_ws
+    coverage:
+      files-to-instrument:
+        - src/actionlib/test/add_two_ints_server.cpp
+        - src/actionlib/test/server_goal_handle_destruction.cpp
+        - src/actionlib/test/add_two_ints_client.cpp
+        - src/actionlib/test/simple_client_test.cpp
+        - src/actionlib/test/ref_server.cpp
+        - src/actionlib/test/simple_execute_ref_server.cpp
+        - src/actionlib/test/test_cpp_simple_client_cancel_crash.cpp
+        - src/actionlib/test/exercise_simple_client.cpp
+        - src/actionlib/test/action_client_destruction_test.cpp
+        - src/actionlib/test/simple_client_wait_test.cpp
+        - src/actionlib/test/simple_client_allocator_test.cpp
+        - src/image_common/camera_info_manager/tests/unit_test.cpp
+        - src/image_common/image_transport/src/republish.cpp
+        - src/image_common/image_transport/tutorial/src/my_subscriber.cpp
+        - src/image_common/image_transport/tutorial/src/my_publisher.cpp
+        - src/kdl_parser/kdl_parser/test/test_inertia_rpy.cpp
+        - src/kdl_parser/kdl_parser/test/test_kdl_parser.cpp
+        - src/perception_pcl/pcl_ros/tools/convert_pcd_to_image.cpp
+        - src/perception_pcl/pcl_ros/tools/bag_to_pcd.cpp
+        - src/perception_pcl/pcl_ros/tools/convert_pointcloud_to_image.cpp
+        - src/perception_pcl/pcl_ros/tools/pcd_to_pointcloud.cpp
+        - src/perception_pcl/pcl_ros/tools/pointcloud_to_pcd.cpp
+        - src/nodelet_core/nodelet/src/nodelet.cpp
+        - src/depthimage_to_laserscan/test/depthimage_to_laserscan_rostest.cpp
+        - src/depthimage_to_laserscan/src/depthimage_to_laserscan.cpp
+        - src/diagnostics/diagnostic_updater/test/diagnostic_updater_test.cpp
+        - src/diagnostics/diagnostic_updater/src/example.cpp
+        - src/diagnostics/diagnostic_aggregator/test/analyzer_loader.cpp
+        - src/diagnostics/diagnostic_aggregator/src/aggregator_node.cpp
+        - src/geometry/tf/test/tf_unittest.cpp
+        - src/geometry/tf/test/test_message_filter.cpp
+        - src/geometry/tf/test/transform_listener_unittest.cpp
+        - src/geometry/tf/test/testBroadcaster.cpp
+        - src/geometry/tf/test/testListener.cpp
+        - src/geometry/tf/test/transform_twist_test.cpp
+        - src/geometry/tf/src/static_transform_publisher.cpp
+        - src/geometry/tf/src/tf_monitor.cpp
+        - src/geometry/tf/src/tf_echo.cpp
+        - src/geometry/tf/src/change_notifier.cpp
+        - src/geometry/tf/src/empty_listener.cpp
+        - src/kobuki/kobuki_keyop/src/main.cpp
+        - src/geometry2/tf2_kdl/test/test_tf2_kdl.cpp
+        - src/geometry2/tf2_ros/test/time_reset_test.cpp
+        - src/geometry2/tf2_ros/test/listener_unittest.cpp
+        - src/geometry2/tf2_ros/src/static_transform_broadcaster_program.cpp
+        - src/geometry2/tf2_ros/src/buffer_server_main.cpp
+        - src/turtlebot_apps/turtlebot_navigation/src/laser_footprint_filter.cpp
+        - src/realsense_camera/test/camera_core.cpp
+        - src/realsense_camera/test/rgbd_topics.cpp
+        - src/realsense_camera/src/get_debug_info.cpp
+        - src/stage_ros/src/stageros.cpp
+        - src/image_pipeline/image_proc/test/test_rectify.cpp
+        - src/image_pipeline/image_proc/test/rostest.cpp
+        - src/image_pipeline/image_proc/src/nodes/image_proc.cpp
+        - src/freenect_stack/freenect_camera/src/nodes/freenect_node.cpp
+        - src/slam_gmapping/gmapping/test/rtest.cpp
+        - src/slam_gmapping/gmapping/src/main.cpp
+        - src/slam_gmapping/gmapping/src/replay.cpp
+        - src/dynamic_reconfigure/test/ref_server.cpp
+        - src/dynamic_reconfigure/test/test_client.cpp
+        - src/dynamic_reconfigure/test/testserver.cpp
+        - src/openni2_camera/openni2_camera/ros/openni2_camera_node.cpp
+        - src/ros_comm/message_filters/test/test_chain.cpp
+        - src/ros_comm/message_filters/test/msg_cache_unittest.cpp
+        - src/ros_comm/message_filters/test/test_subscriber.cpp
+        - src/ros_comm/message_filters/test/test_simple.cpp
+        - src/ros_comm/message_filters/test/test_approximate_time_policy.cpp
+        - src/ros_comm/message_filters/test/test_exact_time_policy.cpp
+        - src/ros_comm/message_filters/test/time_synchronizer_unittest.cpp
+        - src/ros_comm/message_filters/test/time_sequencer_unittest.cpp
+        - src/ros_comm/message_filters/test/test_synchronizer.cpp
+        - src/ros_comm/topic_tools/test/test_shapeshifter.cpp
+        - src/ros_comm/topic_tools/src/drop.cpp
+        - src/ros_comm/topic_tools/src/switch_mux.cpp
+        - src/ros_comm/topic_tools/src/throttle.cpp
+        - src/ros_comm/topic_tools/src/mux.cpp
+        - src/ros_comm/topic_tools/src/demux.cpp
+        - src/ros_comm/topic_tools/src/relay.cpp
+        - src/ros_comm/rosbag/src/record.cpp
+        - src/ros_comm/rosbag/src/play.cpp
+        - src/ros_comm/rosout/rosout.cpp
+        - src/ros_comm/roscpp/src/libros/node_handle.cpp
+        - src/yujin_ocs/yocs_virtual_sensor/src/virtual_sensor_node.cpp
+        - src/zeroconf_avahi_suite/zeroconf_avahi/src/node/zeroconf.cpp
+        - src/robot_state_publisher/test/test_joint_states_bag.cpp
+        - src/robot_state_publisher/test/test_one_link.cpp
+        - src/robot_state_publisher/test/test_two_links_fixed_joint.cpp
+        - src/robot_state_publisher/test/test_two_links_moving_joint.cpp
+        - src/robot_state_publisher/src/joint_state_listener.cpp
+        - src/navigation/global_planner/src/plan_node.cpp
+        - src/navigation/robot_pose_ekf/src/odom_estimation_node.cpp
+        - src/navigation/clear_costmap_recovery/test/clear_tester.cpp
+        - src/navigation/navfn/src/navfn_node.cpp
+        - src/navigation/move_base/src/move_base_node.cpp
+        - src/navigation/costmap_2d/test/costmap_tester.cpp
+        - src/navigation/costmap_2d/test/footprint_tests.cpp
+        - src/navigation/costmap_2d/test/obstacle_tests.cpp
+        - src/navigation/costmap_2d/test/inflation_tests.cpp
+        - src/navigation/costmap_2d/test/static_tests.cpp
+        - src/navigation/costmap_2d/src/costmap_2d_node.cpp
+        - src/navigation/costmap_2d/src/costmap_2d_cloud.cpp
+        - src/navigation/costmap_2d/src/costmap_2d_markers.cpp
+        - src/navigation/amcl/src/amcl_node.cpp
+        - src/navigation/fake_localization/fake_localization.cpp
+        - src/navigation/map_server/test/rtest.cpp
+        - src/navigation/map_server/src/main.cpp
+        - src/navigation/map_server/src/map_saver.cpp
+        - src/urdf/urdf/test/test_robot_model_parser.cpp
+    languages:
+    - cpp
+    compiler:
+      type: catkin
+      workspace: /ros_ws
+      time-limit: 600
+    test-harness:
+      type: simple
+      time-limit: 60
+      context: /ros_ws/turtletest
+      command: python3.6 /ros_ws/turtletest/test.py __ID__
+      tests:
+        - t1
+      # FIXME temporarily disabled as a workaround
+      #  - t2
+      #  - t3

@@ -1,0 +1,3 @@
+- location: /root/.bugzoo/sources/mars
+  name: mars
+  type: local
